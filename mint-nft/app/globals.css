@@ -2,26 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.page-wrapper {
+  background-image: url(assets/BG.svg);
+  background-color: black;
+  background-size: cover;
+  background-position: top;
+  font-family: 'Cinzel', serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.page-wrapper .page-title {
+  background: rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(8px);
+  background: -webkit-linear-gradient(#E7E7E7, #949494);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.page-wrapper .card {
+  background-color: rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(8px);
+  width: calc(100% - 20px);
+  margin: 10px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
