@@ -6,7 +6,6 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 const Navbar = () => {
   const router = useRouter();
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
@@ -23,17 +22,16 @@ const Navbar = () => {
             SEA
           </span>
         </div>
-        {!isModalOpen && (
-          <div className="flex items-center gap-4">
-            <div
-              className="text-white cursor-pointer"
-              onClick={() => router.push("/minting")}
-            >
-              Minting
-            </div>
-            <ConnectButton />;{/* </button> */}
+
+        <div className="flex items-center gap-4">
+          <div
+            className="text-white cursor-pointer"
+            onClick={() => router.push("/minting")}
+          >
+            Minting
           </div>
-        )}
+          <ConnectButton />;
+        </div>
       </div>
     </>
   );

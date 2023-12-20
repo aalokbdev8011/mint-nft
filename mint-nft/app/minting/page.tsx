@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { Contract } from "ethers";
 import { create } from "ipfs-http-client";
 import ContractABI from "../utils/ERC721_ABI.json";
-import { Contract } from "ethers";
+
 
 const ContractAddress = "your contract address";
 
@@ -65,7 +66,7 @@ const Minting = () => {
   };
 
   const mintNFT = async () => {
-    const ipfsHash = await uploadToIPFS(image);
+   await uploadToIPFS(image);
   };
 
   const uploadToIPFS = async (file: any) => {
